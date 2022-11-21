@@ -30,9 +30,13 @@ int main()
             {
                 ship.rotate(0);
             }
-            else
+            else if (ship.getRotation() > 180)
             {
                 ship.rotate(-2);
+            }
+            else if (ship.getRotation() < 180)
+            {
+                ship.rotate(2);
             }
             ship.move(-1, 0);
         }
@@ -42,10 +46,13 @@ int main()
             {
                 ship.rotate(0);
             }
-            else
+            else if (ship.getRotation() <= 180)
+            {
+                ship.rotate(-2);
+            }
+            else if (ship.getRotation() > 180 )
             {
                 ship.rotate(2);
-
             }
             ship.move(1, 0);
         }
@@ -55,10 +62,13 @@ int main()
             {
                 ship.rotate(0);
             }
-            else
+            else if (ship.getRotation() > 90)
+            {
+                ship.rotate(-2);
+            }
+            else if (ship.getRotation() < 90)
             {
                 ship.rotate(2);
-
             }
             ship.move(0, 1);
 
@@ -69,10 +79,13 @@ int main()
             {
                 ship.rotate(0);
             }
-            else
+            else if (ship.getRotation() < 270)
+            {
+                ship.rotate(-2);
+            }
+            else if (ship.getRotation() > 270)
             {
                 ship.rotate(2);
-
             }
             ship.move(0,-1);
         }
